@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+
+# 업로드 폴더
+uploads/
+
+# 환경 설정
+.env
+
+# 시스템 파일
+.DS_Store
+Thumbs.db
