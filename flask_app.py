@@ -14,13 +14,12 @@ from flask import render_template  # 상단에 추가
 
 app = Flask(__name__)
 
-# CORS 설정
+# CORS 설정 수정
 CORS(app, resources={
     r"/*": {
-        "origins": ["http://localhost:5000", "http://127.0.0.1:3000"],  # 로컬 프론트엔드 도메인
+        "origins": ["*"],  # 모든 도메인 허용
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization", "Access-Control-Allow-Credentials"],
-        "supports_credentials": True
     }
 })
 
@@ -456,4 +455,5 @@ def download_file(filename):
         return jsonify({'error': f'파일 다운로드 오류: {str(e)}'}), 500
     
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
