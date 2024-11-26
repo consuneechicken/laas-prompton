@@ -3,3 +3,5 @@ flask-cors
 werkzeug
 requests
 python-dateutil
+pillow
+reportlab==4.0.4
