@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 flask
 flask-cors
 werkzeug
@@ -6,10 +5,3 @@ requests
 python-dateutil
 pillow
 reportlab==4.0.4
-=======
-flask==2.0.1
-flask-cors==3.0.10
-requests==2.26.0
-werkzeug==2.0.1
-gunicorn==20.1.0
->>>>>>> 47e2f2b7cd900e001d8209051a2e258c14a9d65f
